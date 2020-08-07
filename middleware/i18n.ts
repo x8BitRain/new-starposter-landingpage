@@ -1,16 +1,5 @@
-/*
- * 1. sets i18n.locale and state.locale if possible
- * 2. redirects if not with locale
- */
-export default function ({
-  isHMR,
-  app,
-  store,
-  route,
-  params,
-  error,
-  redirect,
-}) {
+// @ts-ignore
+export default ({ isHMR, app, store, route, params, /* error */ redirect }) => {
   if (isHMR) {
     // ignore if called from hot module replacement
     return
