@@ -1,8 +1,8 @@
 <template>
   <section id="hero-image" class="w-full h-full">
-    <div class="w-full bg-center bg-no-repeat bg-cover" :style="heroImage"></div>
-    <h2>{{ $t('home.title') }}</h2>
-    <h3>{{ $t('home.introduction') }}</h3>
+    <HeaderImage />
+    <h2>{{ $t('headlinePrimary') }}</h2>
+    <h3>{{ $t('headlineSecondary') }}</h3>
   </section>
 </template>
 
