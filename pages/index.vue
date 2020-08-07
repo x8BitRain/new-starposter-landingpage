@@ -1,36 +1,23 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        new-starposter-landingpage
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+  <section id="hero-image" class="w-full h-full">
+    <div class="w-full bg-center bg-no-repeat bg-cover" :style="heroImage"></div>
+<!--    <img class="hero" src="~/assets/img/photo_hero.jpg" alt="Header Image" />-->
+  </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      heroImage: {
+        backgroundImage: `url(${require('@/assets/img/photo_hero.jpg')})`,
+        height: '60vh',
+      },
+    }
+  },
+})
 </script>
 
 <style>
